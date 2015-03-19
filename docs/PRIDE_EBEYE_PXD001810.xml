@@ -1,0 +1,41 @@
+<database>
+  <name>PRIDE Archive</name>
+  <description/>
+  <release>3</release>
+  <release_date>2015-03-17</release_date>
+  <entry_count>1</entry_count>
+  <entries>
+    <entry id="PXD001810">
+      <name>PXD001810</name>
+      <description>SUMO-2 Orchestrates Chromatin Modifiers in Response to DNA Damage</description>
+      <cross_references>
+        <ref dbkey="9606" dbname="TAXONOMY"/>
+        <ref dbkey="25772364" dbname="pubmed"/>
+      </cross_references>
+      <dates>
+        <date type="submission" value="2015-02-12"/>
+        <date type="publication" value="2015-03-16"/>
+      </dates>
+      <additional_fields>
+        <field name="project_tag">Biological</field>
+        <field name="tissue">HeLa cell</field>
+        <field name="instrument">LTQ Orbitrap Velos</field>
+        <field name="instrument">Q Exactive</field>
+        <field name="sample_processing_protocol">Protein-data: Stable expression of FLAG-tagged SUMO-2 wild-type in HeLa cells, light/heavy (Exp1) and light/medium/heavy (Exp2) SILAC labeling of the cells, optional MMS treatment of the cells (one SILAC label only), purification by FLAG-IP to enrich SUMOylated proteins, size-separation by SDS-PAGE, in-gel trypsin digestion, LC-MS/MS. Analysis by Velos (Exp1) and Q-Exactive (Exp2). Site-data: Stable expression of His10-tagged SUMO-2-K0-Q87R in HeLa cells, label-free, optional MMS treatment of the cells, purification by His-pulldown, sample concentration and removal of free SUMO by kDa filtering, digestion with Lys-C, purification by His-pulldown, sample concentration and removal of unrelated peptides by kDa filtering, in-solution trypsin digestion, LC-MS/MS. Analysis by Q-Exactive.</field>
+        <field name="data_processing_protocol">Protein-data: MaxQuant 1.2.2.9 was used. Search parameters were essentially left at default. Light/heavy SILAC labeling was used for Exp1, and Light/medium/heavy labeling was used for Exp2. Site-data: MaxQuant 1.5.1.2 was used. Search parameters were essentially left at default. QQTGG and pyro-QQTGG were searched as variable modifications, including a list of diagnostic peaks corresponding to unique mass fragments resulting from fragmentation of the QQTGG or pyro-QQTGG tryptic remnant.</field>
+        <field name="project_description">Small Ubiquitin-like Modifiers play critical roles in the DNA Damage Response (DDR). To increase our understanding of SUMOylation in the mammalian DDR, we employed a quantitative proteomics approach to identify dynamically regulated SUMO-2 conjugates and modification sites upon treatment with the DNA damaging agent MMS. We have uncovered a dynamic set of 20 upregulated and 33 downregulated SUMO-2 conjugates, and 755 SUMO-2 sites, of which 362 were dynamic in response to MMS. In contrast to yeast, where a response is centered on homologous recombination, we identified dynamically SUMOylated interaction networks of chromatin modifiers, transcription factors, DNA repair factors and nuclear body components. SUMOylated chromatin modifiers include JARID1B/KDM5B, JARID1C/KDM5C, p300, CBP, PARP1, SetDB1 and MBD1. Whereas SUMOylated JARID1B was ubiquitylated by the SUMO-targeted ubiquitin ligase RNF4 and degraded by the proteasome in response to DNA damage, JARID1C was SUMOylated and recruited to the chromatin to demethylate histone H3K4.</field>
+        <field name="experiment_type">Affinity purification coupled with mass spectrometry proteomics</field>
+        <field name="keywords">SUMO-2, SUMO, MMS, DNA, damage, chromatin, repair, site</field>
+        <field name="quantification_method">SILAC</field>
+        <field name="quantification_method">Label free</field>
+        <field name="submission_type">PARTIAL</field>
+        <field name="modification">sumoylated lysine</field>
+        <field name="disease">Cervix carcinoma</field>
+        <field name="software">Not available</field>
+        <field name="cell_type">permanent cell line cell</field>
+        <field name="species">Homo sapiens (Human)</field>
+        <field name="publication">Hendriks IA, Treffers LW, Verlaan-de Vries M, Olsen JV, Vertegaal AC. SUMO-2 Orchestrates Chromatin Modifiers in Response to DNA Damage. Cell Rep. 2015 Mar 10. pii: S2211-1247(15)00179-5</field>
+      </additional_fields>
+    </entry>
+  </entries>
+</database>
