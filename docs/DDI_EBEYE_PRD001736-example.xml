@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<database>
+  <name>DDI</name>
+  <description> Data Discovery Interface in EBI  </description>
+  <release>3</release>
+  <release_date>2015-02-17</release_date>
+  <entry_count>1</entry_count>
+  <entries>
+    <entry id="PXD001736">
+	<name>System-wide analysis of SUMOylation dynamics in response to replication stress reveals novel SUMO target proteins and acceptor lysines relevant for genome stability</name> <!--title in px-->
+        <description>Genotoxic agents can cause replication fork stalling in dividing cells due to DNA lesions, eventually leading to replication fork collapse when the damage is not repaired. Small Ubiquitin-like Modifiers (SUMOs) are known to counteract replication stress, nevertheless, only a small number of relevant SUMO target proteins are known. To address this, we have purified and identified SUMO-2 target proteins regulated by replication stress in human cells. The developed methodology enabled single step purification of His10-SUMO-2 conjugates under denaturing conditions with high yield and high purity. The methodology is generic and is widely applicable in the ubiquitin field. Following statistical analysis on five biological replicates, a total of 566 SUMO-2 targets were identified. After 2 hours of Hydroxyurea treatment, 10 proteins were up-regulated for SUMOylation and 2 proteins were down-regulated for SUMOylation, whereas after 24 hours, 35 proteins were up-regulated for SUMOylation and 13 proteins were down-regulated for SUMOylation. A site-specific approach was used to map over 1,000 SUMO-2 acceptor lysines in target proteins. A large subset of these identified proteins function in one network that consists of interacting replication factors, transcriptional regulators, DNA damage response factors including MDC1, ATR-interacting protein ATRIP, the Bloom syndrome protein and the BLM-binding partner RMI1, the crossover junction endonuclease EME1, BRCA1 and CHAF1A. Furthermore, centromeric proteins and signal transducers were dynamically regulated by SUMOylation upon replication stress. Our results uncover a comprehensive network of SUMO target proteins dealing with replication damage and provide a framework for detailed understanding of the role of SUMOylation to counteract replication stress. Ultimately, our study reveals how a post-translational modification is able to orchestrate a large variety of different proteins to integrate different nuclear processes with the aim of dealing with the induced DNA damage</description>
+      <cross_references><!--optional-->
+        <ref dbkey="9606" dbname="TAXONOMY"/>
+        <ref dbkey="25755297" dbname="pubmed"/>
+      </cross_references>
+      <dates> 
+        <date type="submission" value="2015-03-12"/>
+        <date type="publication" value="2015-03-12"/><!--optional-->
+        <date type="last_modification" value="Not available"/><!--optional-->
+      </dates>
+      <additional_fields>
+	<field name="omics_type">Proteomics</field>
+        <field name="hosting_repository">PRIDE</field>
+
+	<field name="technology_type">mass spectrometry</field>  <!--NMR; NGS; and so on-->
+	<field name="instrument_platforms">Q Exactive</field>
+
+	<field name="species_organisms">Homo sapiens (Human)</field>
+	<field name="tissue">bone marrow</field>  
+	<field name="diseases">osteosarcoma</field>  
+
+
+	<field name="project_submitter">Jer-gung Chang; j.g.chang@lumc.nl; LUMC</field>   
+	<field name="project_lab_head">Alfred Vertegaal; A.C.O.Vertegaal@lumc.nl; Leiden University Medical Center Molecular Cell Biology group</field> <!--optional-->
+
+        <field name="submitter_keywords">DNA damage</field>
+        <field name="submitter_keywords">Affinity purification</field>
+	<field name="submitter_keywords">Label free quantification</field>
+	<field name="curator_keyword">Biological</field>
+
+	<field name="publication">PMID: 25429530</field><!--optional? duplicated with cross_references pubmed-->
+	<field name="publication">Xiao Z, Chang JG, Hendriks IA, Sigurdsson JO, Olsen JV, Vertegaal AC. System-wide analysis of SUMOylation dynamics in response to replication stress reveals novel SUMO target proteins and acceptor lysines relevant for genome stability. Mol Cell Proteomics. 2015 Mar 9. pii: mcp.O114.044792</field>
+
+        <field name="full_dataset_link">Dataset FTP location: "ftp://ftp.pride.ebi.ac.uk/pride/data/archive/2015/03/PXD001736"</field><!--not searchable?-->
+	<field name="full_dataset_link">PRIDE project URI: "http://www.ebi.ac.uk/pride/archive/projects/PXD001736"</field>
+
+	<field name="dataset_file">Associated raw file URI: "ftp://ftp.pride.ebi.ac.uk/pride/data/archive/2015/03/PXD001736/q100811a.raw"</field> <!--not searchable-->
+        <field name="dataset_file">Associated raw file URI: "ftp://ftp.pride.ebi.ac.uk/pride/data/archive/2015/03/PXD001736/q100811b.raw"</field>
+        <field name="dataset_file">Associated raw file URI: "ftp://ftp.pride.ebi.ac.uk/pride/data/archive/2015/03/PXD001736/q100812a.raw"</field>
+        <field name="dataset_file">Associated raw file URI: "ftp://ftp.pride.ebi.ac.uk/pride/data/archive/2015/03/PXD001736/q100812b.raw"</field>
+        <field name="dataset_file">Associated raw file URI: "ftp://ftp.pride.ebi.ac.uk/pride/data/archive/2015/03/PXD001736/q100813a.raw"</field>
+        <field name="dataset_file">Associated raw file URI: "ftp://ftp.pride.ebi.ac.uk/pride/data/archive/2015/03/PXD001736/q100813b.raw"</field>
+        <field name="dataset_file">Associated raw file URI: "ftp://ftp.pride.ebi.ac.uk/pride/data/archive/2015/03/PXD001736/q100904a.raw"</field>
+        <field name="dataset_file">Associated raw file URI: "ftp://ftp.pride.ebi.ac.uk/pride/data/archive/2015/03/PXD001736/q100904b.raw"</field>
+        <field name="dataset_file">Associated raw file URI: "ftp://ftp.pride.ebi.ac.uk/pride/data/archive/2015/03/PXD001736/q100905a.raw"</field>
+        <field name="dataset_file">Associated raw file URI: "ftp://ftp.pride.ebi.ac.uk/pride/data/archive/2015/03/PXD001736/q100905b.raw"</field>
+        <field name="dataset_file">Associated raw file URI: "ftp://ftp.pride.ebi.ac.uk/pride/data/archive/2015/03/PXD001736/q100906a.raw"</field>
+        <field name="dataset_file">Associated raw file URI: "ftp://ftp.pride.ebi.ac.uk/pride/data/archive/2015/03/PXD001736/q100906b.raw"</field>
+        <field name="dataset_file">Associated raw file URI: "ftp://ftp.pride.ebi.ac.uk/pride/data/archive/2015/03/PXD001736/q100907a.raw"</field>
+        <field name="dataset_file">Associated raw file URI: "ftp://ftp.pride.ebi.ac.uk/pride/data/archive/2015/03/PXD001736/q100907b.raw"</field>
+        <field name="dataset_file">Associated raw file URI: "ftp://ftp.pride.ebi.ac.uk/pride/data/archive/2015/03/PXD001736/q100908a.raw"</field>
+        <field name="dataset_file">Associated raw file URI: "ftp://ftp.pride.ebi.ac.uk/pride/data/archive/2015/03/PXD001736/q100908b.raw"</field>
+        <field name="dataset_file">Associated raw file URI: "ftp://ftp.pride.ebi.ac.uk/pride/data/archive/2015/03/PXD001736/q100909a.raw"</field>
+        <field name="dataset_file">Associated raw file URI: "ftp://ftp.pride.ebi.ac.uk/pride/data/archive/2015/03/PXD001736/q100909b.raw"</field>
+        <field name="dataset_file">Associated raw file URI: "ftp://ftp.pride.ebi.ac.uk/pride/data/archive/2015/03/PXD001736/q100910a.raw"</field>
+        <field name="dataset_file">Associated raw file URI: "ftp://ftp.pride.ebi.ac.uk/pride/data/archive/2015/03/PXD001736/q100910b.raw"</field>
+        <field name="dataset_file">Associated raw file URI: "ftp://ftp.pride.ebi.ac.uk/pride/data/archive/2015/03/PXD001736/q100911a.raw"</field>
+        <field name="dataset_file">Associated raw file URI: "ftp://ftp.pride.ebi.ac.uk/pride/data/archive/2015/03/PXD001736/q100912b.raw"</field>
+        <field name="dataset_file">Associated raw file URI: "ftp://ftp.pride.ebi.ac.uk/pride/data/archive/2015/03/PXD001736/20140206_QE_UP_U2OS1222_0h_01a.raw"</field>
+       
+	<field name="dataset_file">Other type file URI: "ftp://ftp.pride.ebi.ac.uk/pride/data/archive/2015/03/PXD001736/MSMS_SUMO_Site.zip"</field>
+	<field name="dataset_file">Other type file URI: "ftp://ftp.pride.ebi.ac.uk/pride/data/archive/2015/03/PXD001736/mqpar_SUMO_protein.xml"</field>
+	<field name="dataset_file">Other type file URI: "ftp://ftp.pride.ebi.ac.uk/pride/data/archive/2015/03/PXD001736/mqpar_SUMO_site.xml"</field>
+	
+	<field name="dataset_file">Search engine output file URI:  "ftp://ftp.pride.ebi.ac.uk/pride/data/archive/2015/03/PXD001736/SUMO_Proteins.zip"</field>
+	<field name="dataset_file">Search engine output file URI:  "ftp://ftp.pride.ebi.ac.uk/pride/data/archive/2015/03/PXD001736/Site.zip"</field>
+
+	<!--for proteomics only-->
+	<field name="modification">monohydroxylated residue</field>
+	<field name="modification">iodoacetamide derivatized residue</field>
+	<field name="modification">sumoylated lysine</field>
+	<!--end for proteomics only-->
+
+
+      </additional_fields>
+    </entry>
+  </entries>
+</database>
