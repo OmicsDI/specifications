@@ -287,16 +287,16 @@
 
 	<dataUpdate>
 		<script type="groovy"
-			location="${ebinocle-config.updateScripts}${fs}metabolights.groovy" />
-		<footprint>${ebinocle.dataRootDir}${fs}metabolights${fs}latest${fs}footprint_metabolights.properties</footprint>
-		<metadata>${ebinocle.dataRootDir}${fs}metabolights${fs}latest${fs}metadata_metabolights.properties</metadata>
+			location="${ebinocle-config.updateScripts}${fs}ddi.groovy" />
+		<footprint>${ebinocle.dataRootDir}${fs}ddi${fs}latest${fs}footprint_ddi.properties</footprint>
+		<metadata>${ebinocle.dataRootDir}${fs}ddi${fs}latest${fs}metadata_ddi.properties</metadata>
 	</dataUpdate>
 
 	<index>
 		<sources>
 			<source>
-				<path>${ebinocle.dataRootDir}${fs}metabolights${fs}latest</path>
-				<filePattern>eb-eye_metabolights\.xml</filePattern>
+				<path>${ebinocle.dataRootDir}${fs}ddi${fs}latest</path>
+				<filePattern>eb-eye_ddi\.xml</filePattern>
 				<excludeFolderPattern>.*</excludeFolderPattern>
 			</source>
 		</sources>
