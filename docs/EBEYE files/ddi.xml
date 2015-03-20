@@ -1,0 +1,321 @@
+<!--
+
+    Copyright (C) 2006-2014 EMBL - European Bioinformatics Institute
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+            http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<domain id="ddi" parentId="reactionsPathways" visible="true"     <!--we may need make a new category for the multi-omics-->
+	order="0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="leaf-domain.xsd">
+	<name>DDI</name>
+	<description>Data Discovery Interface for Multiple Omics</description>
+	<mainURL>http://www.ebi.ac.uk/ddi/</mainURL>
+	<summary>false</summary>
+	<links>
+		<fieldLinks>
+			<linkGenerator
+				classname="uk.ac.ebi.ebinocle.web.model.linkgenerator.TemplateFieldLinkGenerator">
+				<options>
+					<option key="template" value="http://www.ebi.ac.uk/ddi/%{field:id}" />  <!--not sure-->
+					<option key="fieldRef" value="name" /><!--not sure-->
+				</options>
+				<name>%{field:name}</name>
+				<description>View in the DDI website</description>
+			</linkGenerator>
+		</fieldLinks>
+	</links>
+
+	<fields>
+		<field id="omics_type" type="text">
+			<options>
+				<option key="indexing.config.store" value="YES" />
+				<option key="indexing.config.index" value="YES" />
+
+				<option key="search.facet.handler.type" value="multivalue" />  <!--??-->
+				<option key="search.facet.max.count" value="10" />
+				<option key="search.facet.min.hit.count" value="1" />
+				<option key="search.facet.multi.select" value="false" />
+				<option key="search.facet.label.retriever" value="omics_type" />
+				<option key="search.facet.name" value="omics_type" />
+				<option key="search.facet.display.order" value="0" />
+
+			</options>
+			<name>omics_type</name>
+			<description>Omics_type</description>
+		</field>
+		<field id="hosting_repository" type="text">
+			<options>
+				<option key="indexing.config.store" value="YES" />
+				<option key="indexing.config.index" value="YES" />
+
+				<option key="search.facet.handler.type" value="multivalue" />
+				<option key="search.facet.max.count" value="10" />
+				<option key="search.facet.min.hit.count" value="1" />
+				<option key="search.facet.multi.select" value="false" />
+				<option key="search.facet.label.retriever" value="hosting_repository" />
+				<option key="search.facet.name" value="hosting_repository" />
+				<option key="search.facet.display.order" value="0" />
+			</options>
+			<name>hosting_repository</name>
+			<description>Hosting_repository</description>
+		</field>
+		<field id="technology_type" type="text">
+			<options>
+				<option key="indexing.config.store" value="YES" />
+				<option key="indexing.config.index" value="YES" />
+
+				<option key="search.facet.handler.type" value="multivalue" />
+				<option key="search.facet.max.count" value="10" />
+				<option key="search.facet.min.hit.count" value="1" />
+				<option key="search.facet.multi.select" value="false" />
+				<option key="search.facet.label.retriever" value="technology_type" />
+				<option key="search.facet.name" value="technology_type" />
+				<option key="search.facet.display.order" value="0" />
+			</options>
+			<name>technology_type</name>
+			<description>Technology_type</description>
+		</field>
+		<field id="instrument_platform" type="text">
+			<options>
+				<option key="indexing.config.store" value="YES" />
+				<option key="indexing.config.index" value="YES" />
+
+				<option key="search.facet.handler.type" value="multivalue" />
+				<option key="search.facet.max.count" value="10" />
+				<option key="search.facet.min.hit.count" value="1" />
+				<option key="search.facet.multi.select" value="false" />
+				<option key="search.facet.label.retriever" value="instrument_platform" />
+				<option key="search.facet.name" value="instrument_platform" />
+				<option key="search.facet.display.order" value="0" />
+			</options>
+			<name>instrument_platform</name>
+			<description>Instrument_Platform</description>
+		</field>
+		<field id="species_organisms" type="text">
+			<options>
+				<option key="indexing.config.store" value="YES" />
+				<option key="indexing.config.index" value="YES" />
+
+				<option key="search.facet.handler.type" value="multivalue" />
+				<option key="search.facet.max.count" value="10" />
+				<option key="search.facet.min.hit.count" value="1" />
+				<option key="search.facet.multi.select" value="false" />
+				<option key="search.facet.label.retriever" value="species_organisms" />
+				<option key="search.facet.name" value="species_organisms" />
+				<option key="search.facet.display.order" value="0" />
+			</options>
+			<name>species_organisms</name>
+			<description>Species_Organisms</description>
+		</field>
+		<field id="tissue" type="text">
+			<options>
+				<option key="indexing.config.store" value="YES" />
+				<option key="indexing.config.index" value="NO" />
+				<!--
+				<option key="search.facet.handler.type" value="multivalue" />
+				<option key="search.facet.max.count" value="10" />
+				<option key="search.facet.min.hit.count" value="1" />
+				<option key="search.facet.multi.select" value="false" />
+				<option key="search.facet.label.retriever" value="omics_type" />
+				<option key="search.facet.name" value="omics_type" />
+				<option key="search.facet.display.order" value="0" />
+				-->
+			</options>
+			<name>tissue</name>
+			<description>Tissue</description>
+		</field>
+		<field id="disease" type="text">
+			<options>
+				<option key="indexing.config.store" value="YES" />
+				<option key="indexing.config.index" value="NO" />
+				<!--
+				<option key="search.facet.handler.type" value="multivalue" />
+				<option key="search.facet.max.count" value="10" />
+				<option key="search.facet.min.hit.count" value="1" />
+				<option key="search.facet.multi.select" value="false" />
+				<option key="search.facet.label.retriever" value="omics_type" />
+				<option key="search.facet.name" value="omics_type" />
+				<option key="search.facet.display.order" value="0" />
+				-->
+			</options>
+			<name>disease</name>
+			<description>Disease</description>
+		</field>
+		<field id="project_submitter" type="text">
+			<options>
+				<option key="indexing.config.store" value="YES" />
+				<option key="indexing.config.index" value="YES" />
+			</options>
+			<name>project_submitter</name>
+			<description>Project_submitter</description>
+		</field>
+		<field id="project_lab_head" type="text">
+			<options>
+				<option key="indexing.config.store" value="YES" />
+				<option key="indexing.config.index" value="YES" />
+			</options>
+			<name>project_lab_head</name>
+			<description>Project_lab_head</description>
+		</field>
+		<field id="submitter_keywords" type="text">
+			<options>
+				<option key="indexing.config.store" value="YES" />
+				<option key="indexing.config.index" value="YES" />
+			</options>
+			<name>submitter_keywords</name>
+			<description>Submitter_keywords</description>
+		</field>
+		<field id="curator_keyword" type="text">
+			<options>
+				<option key="indexing.config.store" value="YES" />
+				<option key="indexing.config.index" value="YES" />
+			</options>
+			<name>curator_keyword</name>
+			<description>Curator_keyword</description>
+		</field>
+		<field id="publication" type="text">
+			<options>
+				<option key="indexing.config.store" value="YES" />
+				<option key="indexing.config.index" value="YES" />
+			</options>
+			<name>publication</name>
+			<description>Publication</description>
+		</field>
+		<field id="full_dataset_link" type="text">
+			<options>
+				<option key="indexing.config.store" value="YES" />
+				<option key="indexing.config.index" value="YES" />
+			</options>
+			<name>full_dataset_link</name>
+			<description>Full_dataset_link</description>
+		</field>
+		<field id="dataset_file" type="text">
+			<options>
+				<option key="indexing.config.store" value="YES" />
+				<option key="indexing.config.index" value="YES" />
+			</options>
+			<name>dataset_file</name>
+			<description>Dataset_file</description>
+		</field>
+		<field id="modification" type="text">
+			<options>
+				<option key="indexing.config.store" value="YES" />
+				<option key="indexing.config.index" value="YES" />
+
+				<option key="search.facet.handler.type" value="multivalue" />  
+				<option key="search.facet.max.count" value="10" />
+				<option key="search.facet.min.hit.count" value="1" />
+				<option key="search.facet.multi.select" value="false" />
+				<option key="search.facet.label.retriever" value="modification" />
+				<option key="search.facet.name" value="modification" />
+				<option key="search.facet.display.order" value="0" />
+			</options>
+			<name>modification</name>
+			<description>Modification</description>
+		</field>
+		<field id="study_design" type="text">
+			<options>
+				<option key="indexing.config.store" value="YES" />
+				<option key="indexing.config.index" value="YES" />
+			</options>
+			<name>study_design</name>
+			<description>Study_design</description>
+		</field>
+		<field id="study_factor" type="text">
+			<options>
+				<option key="indexing.config.store" value="YES" />
+				<option key="indexing.config.index" value="YES" />
+			</options>
+			<name>study_factor</name>
+			<description>Study_factor</description>
+		</field>
+		<field id="study_status" type="text">
+			<options>
+				<option key="indexing.config.store" value="YES" />
+				<option key="indexing.config.index" value="YES" />
+			</options>
+			<name>study_status</name>
+			<description>Study_status</description>
+		</field>
+		<field id="CHEBI" type="xref">
+			<options>
+				<option key="config.xref.domain.field" value="acc" />
+				<option key="config.xref.domain" value="chebi" />
+			</options>
+			<name>CHEBI</name>
+			<description></description>
+		</field>
+		<field id="PUB_MED" type="xref">
+			<options>
+				<option key="config.xref.domain.field" value="id" />
+				<option key="config.xref.domain" value="medline" />
+			</options>
+			<name>PUB_MED</name>
+			<description>MEDLINE reference</description>
+		</field>
+		<field id="TAXONOMY" type="xref">
+			<options>
+                                <option key="config.xref.domain.field" value="id" />
+                                <option key="config.xref.domain" value="taxonomy" />
+				<!--				
+				<option key="search.facet.handler.type" value="multivalue" />
+				<option key="search.facet.max.count" value="10" />
+				<option key="search.facet.min.hit.count" value="1" />
+				<option key="search.facet.multi.select" value="true" />
+				<option key="search.facet.label.retriever" value="taxonomy" />
+				<option key="search.facet.name" value="Organisms" />
+				<option key="search.facet.display.order" value="0" />
+				-->
+			</options>
+			<name>TAXONOMY</name>
+			<description>References to the Organism taxonomy</description>
+		</field>
+
+
+	</fields>
+
+	<dataUpdate>
+		<script type="groovy"
+			location="${ebinocle-config.updateScripts}${fs}metabolights.groovy" />
+		<footprint>${ebinocle.dataRootDir}${fs}metabolights${fs}latest${fs}footprint_metabolights.properties</footprint>
+		<metadata>${ebinocle.dataRootDir}${fs}metabolights${fs}latest${fs}metadata_metabolights.properties</metadata>
+	</dataUpdate>
+
+	<index>
+		<sources>
+			<source>
+				<path>${ebinocle.dataRootDir}${fs}metabolights${fs}latest</path>
+				<filePattern>eb-eye_metabolights\.xml</filePattern>
+				<excludeFolderPattern>.*</excludeFolderPattern>
+			</source>
+		</sources>
+		<splitter>
+			<options>
+				<option key="granularity" value="file" />
+				<option key="splittedParts" value="1" />
+				<option key="headerEndString" value="&lt;entries&gt;" />
+				<option key="footerStartString" value="&lt;/entries&gt;" />
+				<option key="entryStartString" value="&lt;entry " />
+				<option key="entryEndString" value="&lt;/entry&gt;" />
+				<option key="entryStartFirstOnLine" value="false" />
+			</options>
+		</splitter>
+		<indexer>
+			<options>
+				<option key="indexing.parser.path" value="${ebinocle-config.parsers}${fs}xmldump.antxr" />
+			</options>
+		</indexer>
+	</index>
+	<searcher />
+</domain>
