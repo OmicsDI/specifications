@@ -26,8 +26,8 @@
 
 	<field name="species_organisms">HEK293</field>
 	<field name="species_organisms">C57BL/6</field>
-	<field name="tissue">Not available</field>
-	<field name="diseases">Not available</field>
+	<field name="tissue">Not Available</field>
+	<field name="diseases">Not Available</field>
 
 	<field name="project_submitter">Robert Jansen; Divisions of Molecular Oncology and Gene Regulation, Netherlands Cancer Institute, 1066 CX, Amsterdam, The Netherlands.</field>   
 

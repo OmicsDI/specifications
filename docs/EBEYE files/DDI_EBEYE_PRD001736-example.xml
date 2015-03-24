@@ -16,7 +16,7 @@
       <dates> 
         <date type="submission" value="2015-03-12"/>
         <date type="publication" value="2015-03-12"/><!--optional-->
-        <date type="last_modification" value="Not available"/><!--optional-->
+        <date type="last_modification" value="Not available"/>
       </dates>
       <additional_fields>
 	<field name="omics_type">Proteomics</field>
