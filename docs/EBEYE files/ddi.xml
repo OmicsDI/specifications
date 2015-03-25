@@ -15,11 +15,11 @@
     limitations under the License.
 
 -->
-<domain id="repository-name" parentId="parent-ID" visible="true" order="0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="leaf-domain.xsd">
-	<name>repository-name</name>
-	<description>Repository description</description>
-	<mainURL>Reposiroty URI</mainURL>
-	<summary></summary>  <!-- Check if we need to keep this information, is redundant with summary-->
+<domain id="omicsDI" parentId="parent-ID" visible="true" order="0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="leaf-domain.xsd">
+	<name>omicsDI</name>
+	<description>omicsDI description</description>
+	<mainURL>http://www.ebi.ac.uk/omicsdi</mainURL>
+	<summary>false</summary>  
 	<links>
 		<fieldLinks>  <!--needed to be modified based on the repositories-->
 			<linkGenerator classname="uk.ac.ebi.ebinocle.web.model.linkgenerator.TemplateFieldLinkGenerator">
