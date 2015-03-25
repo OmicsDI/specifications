@@ -15,20 +15,20 @@
     limitations under the License.
 
 -->
-<domain id="repository-name" parentId="Proteomics" visible="true" order="0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="leaf-domain.xsd">
+<domain id="repository-name" parentId="parent-ID" visible="true" order="0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="leaf-domain.xsd">
 	<name>repository-name</name>
 	<description>Repository description</description>
 	<mainURL>Reposiroty URI</mainURL>
 	<summary></summary>  <!-- Check if we need to keep this information, is redundant with summary-->
 	<links>
-		<fieldLinks>
+		<fieldLinks>  <!--needed to be modified based on the repositories-->
 			<linkGenerator classname="uk.ac.ebi.ebinocle.web.model.linkgenerator.TemplateFieldLinkGenerator">
 				<options>
-					<option key="template" value="http://www.ebi.ac.uk/ddi/%{field:id}" />  <!-- check this if we have it in M P E -->
-					<option key="fieldRef" value="name" /><!--not sure-->
+					<option key="template" value="http://www.ebi.ac.uk/repository-name/%{field:id}" />  <!-- check this if we have it in M P E, yes we have -->
+					<option key="fieldRef" value="name" />
 				</options>
 				<name>%{field:name}</name>
-				<description>View in the DDI website</description>
+				<description>View in the repository website</description>
 			</linkGenerator>
 		</fieldLinks>
 	</links>
@@ -39,7 +39,7 @@
 				<option key="indexing.config.store" value="YES" />
 				<option key="indexing.config.index" value="YES" />
 
-				<option key="search.facet.handler.type" value="multivalue" />  <!-- Check what means-->
+				<option key="search.facet.handler.type" value="multivalue" />  <!-- Check what means: the field is multivalued, and the facet can handle it-->
 				<option key="search.facet.max.count" value="10" />
 				<option key="search.facet.min.hit.count" value="1" />
 				<option key="search.facet.multi.select" value="true" />
@@ -62,7 +62,7 @@
 				<option key="search.facet.multi.select" value="false" />
 				<option key="search.facet.label.retriever" value="hosting_repository" />
 				<option key="search.facet.name" value="hosting_repository" />
-				<option key="search.facet.display.order" value="0" />
+				<option key="search.facet.display.order" value="1" />
 			</options>
 			<name>hosting_repository</name>
 			<description>Hosting_repository</description>
@@ -79,7 +79,7 @@
 				<option key="search.facet.multi.select" value="false" />
 				<option key="search.facet.label.retriever" value="technology_type" />
 				<option key="search.facet.name" value="technology_type" />
-				<option key="search.facet.display.order" value="0" />
+				<option key="search.facet.display.order" value="3" />
 			</options>
 			<name>technology_type</name>
 			<description>Technology_type</description>
@@ -96,7 +96,7 @@
 				<option key="search.facet.multi.select" value="false" />
 				<option key="search.facet.label.retriever" value="instrument_platform" />
 				<option key="search.facet.name" value="instrument_platform" />
-				<option key="search.facet.display.order" value="0" />
+				<option key="search.facet.display.order" value="5" />
 			</options>
 			<name>instrument_platform</name>
 			<description>Instrument_Platform</description>
@@ -113,7 +113,7 @@
 				<option key="search.facet.multi.select" value="false" />
 				<option key="search.facet.label.retriever" value="species_organisms" />
 				<option key="search.facet.name" value="species_organisms" />
-				<option key="search.facet.display.order" value="0" />
+				<option key="search.facet.display.order" value="2" />
 			</options>
 			<name>species_organisms</name>
 			<description>Species_Organisms</description>
@@ -122,14 +122,14 @@
 		<field id="tissue" type="text">
 			<options>
 				<option key="indexing.config.store" value="YES" />
-				<option key="indexing.config.index" value="NO" />
+				<option key="indexing.config.index" value="YES" />
 				<option key="search.facet.handler.type" value="multivalue" />
 				<option key="search.facet.max.count" value="10" />
 				<option key="search.facet.min.hit.count" value="1" />
 				<option key="search.facet.multi.select" value="false" />
 				<option key="search.facet.label.retriever" value="tissue" />
 				<option key="search.facet.name" value="tissue" />
-				<option key="search.facet.display.order" value="0" />
+				<option key="search.facet.display.order" value="6" />
 			</options>
 			<name>tissue</name>
 			<description>Tissue</description>
@@ -138,14 +138,14 @@
 		<field id="disease" type="text">
 			<options>
 				<option key="indexing.config.store" value="YES" />
-				<option key="indexing.config.index" value="NO" />
+				<option key="indexing.config.index" value="YES" />
 				<option key="search.facet.handler.type" value="multivalue" />
 				<option key="search.facet.max.count" value="10" />
 				<option key="search.facet.min.hit.count" value="1" />
 				<option key="search.facet.multi.select" value="false" />
 				<option key="search.facet.label.retriever" value="disease" />
 				<option key="search.facet.name" value="disease" />
-				<option key="search.facet.display.order" value="0" />
+				<option key="search.facet.display.order" value="7" />
 			</options>
 			<name>disease</name>
 			<description>Disease</description>
@@ -228,7 +228,7 @@
 				<option key="indexing.config.index" value="YES" />
 			</options>
 			<name>study_design</name>
-			<description>Study_design</description>
+			<description>Study_design (This field is only for Metabolomics studies)</description>
 		</field>
 		
 		<field id="study_factor" type="text">
@@ -237,7 +237,7 @@
 				<option key="indexing.config.index" value="YES" />
 			</options>
 			<name>study_factor</name>
-			<description>Study_factor</description>
+			<description>Study_factor (This field is only for Metabolomics studies) </description>
 		</field>
 		
 		<field id="study_status" type="text">
@@ -246,7 +246,7 @@
 				<option key="indexing.config.index" value="YES" />
 			</options>
 			<name>study_status</name>
-			<description>Study_status</description>
+			<description>Study_status (This field is only for Metabolomics studies) </description>
 		</field>
 		
 		<field id="CHEBI" type="xref">
@@ -264,16 +264,16 @@
 				<option key="config.xref.domain" value="uniprot" />
 			</options>
 			<name>UNIPROT</name>
-			<description>UNIPROT accession (This field is only for UNIPROT studies)</description>
+			<description>UNIPROT reference (This field is only for Proteomics studies)</description>
 		</field>
 		
-		<field id="ENSEMBLE" type="xref">
+		<field id="ENSEMBL" type="xref">
 			<options>
-				<option key="config.xref.domain.field" value="acc" />
-				<option key="config.xref.domain" value="ensemble" />
+				<option key="config.xref.domain.field" value="peptide" />
+				<option key="config.xref.domain" value="ensembl" />
 			</options>
-			<name>ENSEMBLE</name>
-			<description>ENSEMBL accession (This field is only for UNIPROT studies)</description>
+			<name>ENSEMBL</name>
+			<description>ENSEMBL reference (This field is only for Proteomics studies)</description>
 		</field>
 		
 		
@@ -289,7 +289,7 @@
 		<field id="TAXONOMY" type="xref">
 			<options>
 				<option key="config.xref.domain.field" value="id" />
-                <option key="config.xref.domain" value="taxonomy" />
+                		<option key="config.xref.domain" value="taxonomy" />
 				<option key="search.facet.handler.type" value="multivalue" />
 				<option key="search.facet.max.count" value="10" />
 				<option key="search.facet.min.hit.count" value="1" />
