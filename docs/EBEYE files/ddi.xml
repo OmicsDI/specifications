@@ -51,6 +51,27 @@
 			<description>Omics type is realted with the type of omics this resource is providing, for example (Metabolomics, Proteomics, Genomics)</description>
 		</field>
 		
+		<!-- We have two well defined protocols: Sample Processing and Data Processing, Every resource can create their own 
+			 definion but this needs to be added in addition for search pourposes.
+		-->
+		<field id="sample_protocol" type="text">
+			<options>
+				<option key="indexing.config.store" value="YES" />
+				<option key="indexing.config.index" value="YES" />
+			</options>
+			<name>sample_protocol</name>
+			<description>Sample Processing Protocol</description>
+		</field>
+		
+		<field id="data_protocol" type="text">
+			<options>
+				<option key="indexing.config.store" value="YES" />
+				<option key="indexing.config.index" value="YES" />
+			</options>
+			<name>data_protocol</name>
+			<description>Data Processing Protocol</description>
+		</field>
+		
 		<field id="hosting_repository" type="text">
 			<options>
 				<option key="indexing.config.store" value="YES" />
@@ -102,23 +123,6 @@
 			<name>instrument_platform</name>
 			<description>Instrument Platform is used to classify  the instruments use for example (5975C Series GC/MSD, Orbitrap), etc</description>
 		</field>
-		
-		<!--<field id="organism" type="text">
-			<options>
-				<option key="indexing.config.store" value="YES" />
-				<option key="indexing.config.index" value="YES" />
-
-				<option key="search.facet.handler.type" value="multivalue" />
-				<option key="search.facet.max.count" value="10" />
-				<option key="search.facet.min.hit.count" value="1" />
-				<option key="search.facet.multi.select" value="false" />
-				<option key="search.facet.label.retriever" value="organism" />
-				<option key="search.facet.name" value="species_organisms" />
-				<option key="search.facet.display.order" value="2" />
-			</options>
-			<name>organism</name>
-			<description>The organims can be use to put the organism or species name, we are interesting in the name of the specie and not the ontology</description>
-		</field>-->
 		
 		<field id="tissue" type="text">
 			<options>
@@ -242,13 +246,14 @@
 			<description>Used in ISATab and other resources to catalog the experimental factors involved</description>
 		</field>
 		
-		<field id="study_status" type="text">    <!-- We need to review this value-->
+		<!-- The study status-->
+		<field id="study_status" type="text">    
 			<options>
 				<option key="indexing.config.store" value="YES" />
 				<option key="indexing.config.index" value="YES" />
 			</options>
 			<name>study_status</name>
-			<description>Study_status (This field is only for Metabolomics studies) </description>
+			<description>Study_status (This field is only for Metabolomics studies) but it can be also included in Proteomics and other fields </description>
 		</field>
 		
 		<!-- Cross references to the most important multi-omics we will support at the very begining -->
