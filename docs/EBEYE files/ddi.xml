@@ -48,7 +48,7 @@
 				<option key="search.facet.display.order" value="0" />
             </options>
 			<name>omics_type</name>
-			<description>Omics_type</description>
+			<description>Omics type is realted with the type of omics this resource is providing, for example (Metabolomics, Proteomics, Genomics)</description>
 		</field>
 		
 		<field id="hosting_repository" type="text">
@@ -65,7 +65,7 @@
 				<option key="search.facet.display.order" value="0" />
 			</options>
 			<name>hosting_repository</name>
-			<description>Hosting_repository</description>
+			<description>The hosting repository is providing the information about Repository for example (PRIDE, EGA, etc)</description>
 		</field>
 		
 		<field id="technology_type" type="text">
@@ -82,7 +82,8 @@
 				<option key="search.facet.display.order" value="0" />
 			</options>
 			<name>technology_type</name>
-			<description>Technology_type</description>
+			<description>Technology type, provides the information about the Technology in metabolomics could be Mass Spectrometry, 
+				NMR spectroscopy, NMR spectroscopy, or can be MRM in proteomics or experiment Type in proteomics</description>
 		</field>
 		
 		<field id="instrument_platform" type="text">
@@ -99,10 +100,10 @@
 				<option key="search.facet.display.order" value="0" />
 			</options>
 			<name>instrument_platform</name>
-			<description>Instrument_Platform</description>
+			<description>Instrument Platform is used to classify  the instruments use for example (5975C Series GC/MSD, Orbitrap), etc</description>
 		</field>
 		
-		<field id="species_organisms" type="text">
+		<!--<field id="organism" type="text">
 			<options>
 				<option key="indexing.config.store" value="YES" />
 				<option key="indexing.config.index" value="YES" />
@@ -111,13 +112,13 @@
 				<option key="search.facet.max.count" value="10" />
 				<option key="search.facet.min.hit.count" value="1" />
 				<option key="search.facet.multi.select" value="false" />
-				<option key="search.facet.label.retriever" value="species_organisms" />
+				<option key="search.facet.label.retriever" value="organism" />
 				<option key="search.facet.name" value="species_organisms" />
 				<option key="search.facet.display.order" value="0" />
 			</options>
-			<name>species_organisms</name>
-			<description>Species_Organisms</description>
-		</field>
+			<name>organism</name>
+			<description>The organims can be use to put the organism or species name, we are interesting in the name of the specie and not the ontology</description>
+		</field>-->
 		
 		<field id="tissue" type="text">
 			<options>
@@ -132,7 +133,7 @@
 				<option key="search.facet.display.order" value="0" />
 			</options>
 			<name>tissue</name>
-			<description>Tissue</description>
+			<description>Tissue will be use to describe the tissue used in the experiment and is really useful in PRIDE experiments</description>
 		</field>
 		
 		<field id="disease" type="text">
@@ -148,7 +149,7 @@
 				<option key="search.facet.display.order" value="0" />
 			</options>
 			<name>disease</name>
-			<description>Disease</description>
+			<description>Disease will be use to describe the dieasse used in the experiment and is really useful in PRIDE experiments</description>
 		</field>
 		
 		<field id="project_submitter" type="text">
@@ -157,7 +158,7 @@
 				<option key="indexing.config.index" value="YES" />
 			</options>
 			<name>project_submitter</name>
-			<description>Project_submitter</description>
+			<description>Project submiter could be the name of the submitter or lab head, it can be one or more entries</description>
 		</field>
 		
 		<field id="submitter_keywords" type="text">
@@ -166,7 +167,7 @@
 				<option key="indexing.config.index" value="YES" />
 			</options>
 			<name>submitter_keywords</name>
-			<description>Submitter_keywords</description>
+			<description>Keywords provider by the submmiter or the original resource</description>
 		</field>
 		
 		<field id="curator_keyword" type="text">
@@ -175,7 +176,7 @@
 				<option key="indexing.config.index" value="YES" />
 			</options>
 			<name>curator_keyword</name>
-			<description>Curator_keyword</description>
+			<description>Keywords provider by the curators</description>
 		</field>
 		
 		<field id="publication" type="text">
@@ -193,7 +194,7 @@
 				<option key="indexing.config.index" value="YES" />
 			</options>
 			<name>full_dataset_link</name>
-			<description>Full_dataset_link</description>
+			<description>The original link of the dataset in the resource</description>
 		</field>
 		
 		<field id="dataset_file" type="text">
@@ -202,7 +203,7 @@
 				<option key="indexing.config.index" value="NO" />
 			</options>
 			<name>dataset_file</name>
-			<description>Dataset_file</description>
+			<description>Some dataset links for example to the actual files in the dataset</description>
 		</field>
 		
 		<field id="modification" type="text">
@@ -228,7 +229,7 @@
 				<option key="indexing.config.index" value="YES" />
 			</options>
 			<name>study_design</name>
-			<description>Study_design</description>
+			<description>This is used in Metaboligths and ISATAB with ontolgies</description>
 		</field>
 		
 		<field id="study_factor" type="text">
@@ -237,10 +238,10 @@
 				<option key="indexing.config.index" value="YES" />
 			</options>
 			<name>study_factor</name>
-			<description>Study_factor</description>
+			<description>Used in ISATab and other resources to catalog the experimental factors involved</description>
 		</field>
 		
-		<field id="study_status" type="text">
+		<field id="study_status" type="text">    <!-- We need to review this value-->
 			<options>
 				<option key="indexing.config.store" value="YES" />
 				<option key="indexing.config.index" value="YES" />
@@ -249,6 +250,7 @@
 			<description>Study_status</description>
 		</field>
 		
+		<!-- Cross references to the most important multi-omics we will support at the very begining -->
 		<field id="CHEBI" type="xref">
 			<options>
 				<option key="config.xref.domain.field" value="acc" />
@@ -264,7 +266,7 @@
 				<option key="config.xref.domain" value="uniprot" />
 			</options>
 			<name>UNIPROT</name>
-			<description>UNIPROT accession (This field is only for UNIPROT studies)</description>
+			<description>UNIPROT accession (This field is only for studies based on UNIPROT such as Proteomics)</description>
 		</field>
 		
 		<field id="ENSEMBLE" type="xref">
@@ -272,10 +274,9 @@
 				<option key="config.xref.domain.field" value="acc" />
 				<option key="config.xref.domain" value="ensemble" />
 			</options>
-			<name>ENSEMBLE</name>
-			<description>ENSEMBL accession (This field is only for UNIPROT studies)</description>
+			<name>ENSEMBL</name>
+			<description>ENSEMBL accession (This field is only for studies based on ENSEMBL such as Proteomics)</description>
 		</field>
-		
 		
 		<field id="PUB_MED" type="xref">
 			<options>
