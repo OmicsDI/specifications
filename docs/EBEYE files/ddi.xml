@@ -15,7 +15,7 @@
     limitations under the License.
 
 -->
-<domain id="repository-name" parentId="parent-ID" visible="true" order="0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="leaf-domain.xsd">
+<database id="repository-name" parentId="parent-ID" visible="true" order="0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<name>repository-name</name>
 	<description>Repository description</description>
 	<mainURL>Reposiroty URI</mainURL>
@@ -277,7 +277,7 @@
 		
 		<field id="ENSEMBL" type="xref">
 			<options>
-				<option key="config.xref.domain.field" value="peptide" />
+				<option key="config.xref.domain.field" value="acc" />
 				<option key="config.xref.domain" value="ensembl" />
 			</options>
 			<name>ENSEMBL</name>
@@ -343,5 +343,5 @@
 			</options>
 		</indexer>
 	</index>
-	<searcher />
-</domain>
+	
+</database>
