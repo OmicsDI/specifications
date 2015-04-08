@@ -15,7 +15,7 @@
     limitations under the License.
 
 -->
-<database id="repository-name" parentId="parent-ID" visible="true" order="0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<database id="repository-name" visible="true" order="0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<name>repository-name</name>
 	<description>Repository description</description>
 	<mainURL>Reposiroty URI</mainURL>
