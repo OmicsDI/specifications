@@ -23,12 +23,14 @@
 	<entry_count></entry_count> <!-- number of entries in the present file -->
 	<entries>
 		<entry id="DatabaseID">
+			<field id="name" type="text">Title of the dataset</field>
+			<field id="decription" type="text">Description of the Dataset</field>
 			<!-- metadata information -->
 			<field id="omics_type" type="text">Proteomics</field>
 			<field id="sample_protocol" type="text">Sample Protocol</field>
 			<field id="data_protocol" type="text">Data Processing Protocol</field>
 			<field id="technology_type" type="text">Technology Type</field> 
-			<field id="instrument_platform" type="text">Intrument Platform</field>
+			<field id="instrument_platform" type="text">instrument</field>
 			<field id="disease" type="text">Tissue</field>
 			<field id="ptm_modification" type="text">Post-translational Modification</field>
 			<field id="project_submitter" type="text">Project Submmiter</field>
@@ -45,7 +47,6 @@
 				<ref dbkey="ENSEMBL id" dbname="ensembl"/>
 				<ref dbkey="UNIPROT id" dbname="uniprot"/>
 				<ref dbkey="TAXONOMY id" dbname="TAXONOMY"/>
-				
 			</cross_references>
 			
 		</entry>
