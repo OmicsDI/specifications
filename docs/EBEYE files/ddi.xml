@@ -33,6 +33,11 @@
 			</linkGenerator>
 		</fieldLinks>
 	</links>
+	
+	<dates>
+		<date type="publication" value="2014-03-11"/>
+		<date type="submission"  value="2014-03-11"/>
+	</dates>
 
 	<fields>
 		<field id="omics_type" type="text">
@@ -297,7 +302,7 @@
 		<field id="TAXONOMY" type="xref">
 			<options>
 				<option key="config.xref.domain.field" value="id" />
-                		<option key="config.xref.domain" value="taxonomy" />
+                <option key="config.xref.domain" value="taxonomy" />
 				<option key="search.facet.handler.type" value="multivalue" />
 				<option key="search.facet.max.count" value="10" />
 				<option key="search.facet.min.hit.count" value="1" />
