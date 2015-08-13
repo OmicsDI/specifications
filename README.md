@@ -179,7 +179,7 @@ The OmicsDI web application has two main different way of navigate the data: (i)
 
 ### 4.1. Get involved
 
-We 
+If you are interested in the project and add your resource to the Index please type an issue [here](https://github.com/BD2K-DDI/specifications/issues/)
 
 ### 4.2. Contact
 
