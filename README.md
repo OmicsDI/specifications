@@ -92,17 +92,49 @@ Currently six different databases in two continents are part of the OmicsDI cons
 
 ![Omics Discovery Index Architecture](https://raw.githubusercontent.com/BD2K-DDI/specifications/master/docs/architecture/architecture.png)
 
-The architecture of the Omics Discovery Index started with an XML [see here](#24-omicsDI-xml)files that contains 
+The architecture of the Omics Discovery Index started with an XML [see here](#24-omicsDI-xml) files that contains 
 the information from each dataset in the database. Each file is retrieved from the providers every night and if a new dataset was 
 added the system will add it. 
 
 Each file is indexed using the EBI Search Indexing System and the final information is exposed using web-services. The EBI Search System also 
 contain the index of other major databases such as Uniprot, ENSEMBL, Pubmed allowing the user cross-link the biological information with 
-those resources [see here](#24-omicsDI-xml). 
+those resources [see here](#24-omicsDI-xml) . 
 
 ### 2.4. OmicsDI XML?
 
+The OmicsDI XML is used to export every database (including all the datasets) to a common structure. The XML structure (in short)
+is the following:
 
+```xml
+<database>
+    <name>Database Name</name>
+    <description>Database Description</description>
+    <release>Number of the release</release>
+    <release_date>Release Date</release_date>
+    <entry_count>Number of entries</entry_count>
+    <entries>      
+        <entry id="Dataset_ID_1">
+            <name>Name of the Dataset</name>
+            <description>Description of the dataset</description>
+            <cross_references>
+                <ref dbkey="CHEBI:16551" dbname="ChEBI"/>
+                <ref dbkey="MTBLC16551" dbname="MetaboLights"/>
+                <ref dbkey="CHEBI:16810" dbname="ChEBI"/>
+                <ref dbkey="MTBLC16810" dbname="MetaboLights"/>
+                <ref dbkey="CHEBI:30031" dbname="ChEBI"/>
+            </cross_references>
+            <dates>
+                <date type="submission" value="2013-11-19"/>
+                <date type="publication" value="2013-11-26"/>
+            </dates>
+            <additional_fields>
+                <field name="repository">Repository</field>
+                <field name="omics_type">Omics Type</field>
+            </additional_fields>    
+        </entry>
+    </entries>
+</database>         
+```
 
 ### 2.5. How to build a Biodocker container
 
