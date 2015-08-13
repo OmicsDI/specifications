@@ -136,7 +136,19 @@ is the following:
 </database>         
 ```
 
-### 2.5. How to build a Biodocker container
+- Cross reference to other database entities is used to link for example external sources in the dataset. The **dbkey** correspond
+ with the entity in the database and the **dbname** correspond with the database id. Some examples:
+   
+   
+  - If the dataset is from a Human sample, the cross reference should be: <ref dbkey="9606" dbname="TAXONOMY"/>
+   
+  - If the proteomics experiment identified/quantified a UNIPROT id P31946, the cross reference should be: <ref dbkey="P31946" dbname="Uniprot"/>
+
+  - If the dataset was published in a scientific journal and is indexed in pubmed, the cross reference should be: <ref dbkey="26013411" dbname="pubmed"/>
+
+  A complete list of all databases databases for reference can be found in [this site](http://www.ebi.ac.uk/ebisearch/).
+  
+### 2.5. Cross References to other databases
 
 There are two different ways to run a container.
 
