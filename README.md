@@ -12,10 +12,10 @@ Contents
  1.1. [Objectives](#11-objectives)    
  1.2. [What is OmicsDI](#12-what-is-omicsdi)  
 * [Databases](#2-databases)  
-  2.1. [What is a container?](#21-what-is-a-container)  
-  2.2. [How to search for a container](#22-how-to-search-for-a-container)  
-  2.3. [What do I need to use a container?](#23-what-do-i-need-to-use-a-container)   
-  2.4. [How do I use a container?](#24-how-do-i-use-a-container)  
+  2.1. [Major Partners?](#21-major-partners)  
+  2.2. [Which databases are part of OmicsDI](#22-which-databases-are-part-of-omicsdi)  
+  2.3. [OmicsDI Architecture?](#23-Omicsdi-architecture)  
+  2.4. [OmicsDI XML](#24-omicsDI-xml)  
   2.5. [How to build a BioDocker container](#25-how-to-build-a-biodocker-container)  
 * [Developing containers](#3-developing-containers)  
   3.1. [What do I need to develop?](#31-what-do-i-need-to-develop)  
@@ -87,17 +87,22 @@ Currently six different databases in two continents are part of the OmicsDI cons
   - [Metabolomics Workbench](http://www.metabolomicsworkbench.org/): UCSD Metabolomics Workbench, a resource sponsored by the Common Fund of the National Institutes of Health. (UCSD, US) (Metabolomics)
   - [EGA](https://www.ebi.ac.uk/ega/): The European Genome-phenome Archive. (EMBL-EBI, UK)(Genomics)
   
-The BioDocker containers are listed on this repository. Every software has a especific directory with a recipie inside on how to make the container.
 
-### 2.3. What do I need to use a container?
+### 2.3. OmicsDI Architecture?
 
-In order to run a Docker 9or BioDocker) container on your computer you will need the Dcoker daemon installed.
+(https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png =400x400 "OmicsDI Architecture")
 
-Check [here](https://docs.docker.com/installation/) for the instructions o how to do it.
+The architecture of the Omics Discovery Index started with an XML [see here](#24-omicsDI-xml)files that contains 
+the information from each dataset in the database. Each file is retrieved from the providers every night and if a new dataset was 
+added the system will add it. 
 
-### 2.4. How do I use a container?
+Each file is indexed using the EBI Search Indexing System and the final information is exposed using web-services. The EBI Search System also 
+contain the index of other major databases such as Uniprot, ENSEMBL, Pubmed allowing the user cross-link the biological information with 
+those resources [see here](#24-omicsDI-xml). 
 
-In general the `README.md` of each project should explain you how to interact with it.
+### 2.4. OmicsDI XML?
+
+
 
 ### 2.5. How to build a Biodocker container
 
