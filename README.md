@@ -90,7 +90,7 @@ Currently six different databases in two continents are part of the OmicsDI cons
 
 ### 2.3. OmicsDI Architecture?
 
-(https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png =400x400 "OmicsDI Architecture")
+(https://raw.githubusercontent.com/BD2K-DDI/specifications/master/docs/architecture/architecture.png "OmicsDI Architecture")
 
 The architecture of the Omics Discovery Index started with an XML [see here](#24-omicsDI-xml)files that contains 
 the information from each dataset in the database. Each file is retrieved from the providers every night and if a new dataset was 
