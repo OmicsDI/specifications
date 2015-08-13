@@ -15,14 +15,13 @@ Contents
   2.1. [Major Partners?](#21-major-partners)  
   2.2. [Which databases are part of OmicsDI](#22-which-databases-are-part-of-omicsdi)  
   2.3. [OmicsDI Architecture?](#23-Omicsdi-architecture)  
-  2.4. [OmicsDI XML](#24-omicsDI-xml)  
-  2.5. [How to build a BioDocker container](#25-how-to-build-a-biodocker-container)  
-* [Developing containers](#3-developing-containers)  
-  3.1. [What do I need to develop?](#31-what-do-i-need-to-develop)  
-  3.2. [How to create a container?](#32-how-to-create-a-container)  
+  2.4. [OmicsDI XML](#24-omicsDI-xml)
+* [Web services and Web Application](#3-web-services-and-web-application) 
+  3.1. [Access to the web-services](#31-access-to-the-web-services)
+  3.2. [Web Application](#32-web-application)
 * [Support](#4-support)  
-  4.1  [Get involved](#41-get-involved)  
-  4.2. [Contact](#42-contact)   
+  3.1  [Get involved](#41-get-involved)  
+  3.2. [Contact](#42-contact)   
 * [License](#5-license)  
 
 1. Essentials
@@ -146,33 +145,33 @@ is the following:
 
   - If the dataset was published in a scientific journal and is indexed in pubmed, the cross reference should be: <ref dbkey="26013411" dbname="pubmed"/>
 
-  A complete list of all databases databases for reference can be found in [this site](http://www.ebi.ac.uk/ebisearch/).
-  
-### 2.5. Cross References to other databases
+A complete list of all databases databases for reference can be found in [this site](http://www.ebi.ac.uk/ebisearch/). Some files from Proteomics/Metabolomics Data can be found [here]().  
 
-There are two different ways to run a container.
-
-* Go to the GitHub reposiry with the recipie of the software you want, clone it, and build it yourself on your machine.
-* Use the docker daemon to search for a ready-to-use version of the containerized software you want.
-
-Inside the central repository there is a list of softwares with docker recipies, there you can find more information about how to work with them.
-
-
-3. Developing containers
+3. Web services and Web Application
 -----------------------
 
-### 3.1. What do I need to develop?
+### 3.1. Access to the web-services
 
-Docker containers are based on Linux systems, so you will need a computer with Linux installed, you also will need the docker daemon and the software you want to containerize.
+Most data in the Omics Discovery Index can be accessed programmatically using a [RESTful API](http://wwwdev.ebi.ac.uk/Tools/ddi/ws/) allowing for integration with other resources. 
+The API implementation is based on the Spring Rest Framework.
 
-### 3.2. How to create a container?
+**Web browsable API**
 
-Having all in hands now you need to create a Dockerfile. Dockerfiles are simple recipies to instruct the daemon on how to set an appropriate OS and how to download, manage, install and
-give access to the software inside.
+  - The query results returned by the API are available in JSONformat. This ensures that they can be viewed by human and
+    accessed programmatically by computer.
 
-You can check the [Docker](https://docs.docker.com/reference/builder/) documentation for more information.
+  - The main RESTful API page provides a simple web-based user interface, which allows developers can familiarise
+    themselves with the API and get a better sense of the OmicsDI data before writing single line of code.
 
-Once the contaienr is ready you can get in touch with us so we can make the appropriate arrangements to make your container availabe to everyone in the community by giving an automated build system.
+  - Many resources are hyperlinked so that it's possible to navigate the API in the browser.
+
+As a result, developers can familiarise themselves with the API and get a better sense of the [OmicsDI](http://wwwdev.ebi.ac.uk/Tools/ddi/ws/) data.
+
+### 3.2. Web Application
+
+The main goal of OmicsDI project is to have a way to search interesting datasets across omics repositories. 
+The main web application and web service [see here](http://wwwdev.ebi.ac.uk/Tools/ddi/) allow the user to search and navigate through the OmicsDI datasets.
+The OmicsDI web application has two main different way of navigate the data: (i) using the home page navigation blocks or (ii) the search box.
 
 
 4. Support
@@ -180,21 +179,15 @@ Once the contaienr is ready you can get in touch with us so we can make the appr
 
 ### 4.1. Get involved
 
-Whether you want to make your own software available to others as a container, to just usem them on your pipelines and analysis or just give opinions, you are most welcome. This is a community-driven project, that means everyone has a voice.
-
-Here are some general ideas:
-
-* Browse our list of containers
-* Propose your own ideas or software
-* Interact with other if you think there is something missing.
+We 
 
 ### 4.2. Contact
 
-visit the [BioDocker](http://biodocker.github.io/) website.
+Visit the [OmicsDI](http://wwwdev.ebi.ac.uk/Tools/ddi/) website.
 
-visit the [GitHub](https://github.com/BioDocker/biodocker) page for the source code.
+Visit the [GitHub](https://github.com/BD2K-DDI/) page for the source code and the libraries.
 
-visit the [Specification](https://github.com/BioDocker/specifications) page to make comments and requests.
+Visit the [Specification](https://github.com/BD2K-DDI/specifications) page to make comments and requests.
 
 
 5. License
