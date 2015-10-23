@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--                                                                                                     
-	Project: EBInocle
-	Description: Schema of the EBInocle XML format (XML4dbDumps).
-	             The XML4dbDumps format can be used for the databases that currently don't have a flat     
-	             file or an XML formatted dump and where there is no requirement to dump the whole         
-	             database in a specified format.                                                           
-
+	Project: OmicsDI
+	Description: Schema of the OmicsDI XML format (XML4dbDumps).
 	$HeadURL$  
 	$Id$                                                   
 	                                                                                                        
@@ -18,9 +14,9 @@
 	<xsd:complexType name="databaseType">
 		<xsd:all>
 			<xsd:element name="name" type="xsd:string" minOccurs="1"/>
-			<xsd:element name="description" type="xsd:string" minOccurs="0"/>
-			<xsd:element name="release" type="xsd:string" minOccurs="0"/>
-			<xsd:element name="release_date" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="description" type="xsd:string" minOccurs="1"/>
+			<xsd:element name="release" type="xsd:string" minOccurs="1"/>
+			<xsd:element name="release_date" type="xsd:string" minOccurs="1"/>
 			<xsd:element name="entry_count" type="xsd:int" minOccurs="0"/>
 			<xsd:element name="entries" type="entriesType" minOccurs="1"/>
 		</xsd:all>
@@ -35,7 +31,7 @@
 	<xsd:complexType name="entryType">
 		<xsd:all>
 
-			<xsd:element name="name" minOccurs="0">
+			<xsd:element name="name" minOccurs="1">
 				<xsd:complexType>
 					<xsd:simpleContent>
 						<xsd:extension base="xsd:string">
@@ -55,9 +51,9 @@
 			<xsd:element name="description" type="xsd:string" minOccurs="0"/>
 			<xsd:element name="authors" type="xsd:string" minOccurs="0"/>
 			<xsd:element name="keywords" type="xsd:string" minOccurs="0"/>
-			<xsd:element name="dates" type="datesType" minOccurs="0"/>
+			<xsd:element name="dates" type="datesType" minOccurs="1"/>
 			<xsd:element name="cross_references" type="cross_referencesType" minOccurs="0"/>
-			<xsd:element name="additional_fields" type="additional_fieldsType" minOccurs="0"/>
+			<xsd:element name="additional_fields" type="additional_fieldsType" minOccurs="1"/>
 		</xsd:all>
 		<xsd:attribute name="id" type="xsd:string" use="required"/>
 		<xsd:attribute name="acc" type="xsd:string"/>
@@ -65,7 +61,7 @@
 
 	<xsd:complexType name="additional_fieldsType">
 		<xsd:sequence>
-			<xsd:element name="field" type="fieldType" maxOccurs="unbounded" minOccurs="0"/>
+			<xsd:element name="field" type="fieldType" maxOccurs="unbounded" minOccurs="6"/>
 		</xsd:sequence>
 	</xsd:complexType>
 
@@ -106,7 +102,7 @@
 
 	<xsd:complexType name="datesType">
 		<xsd:sequence>
-			<xsd:element name="date" type="dateType" maxOccurs="unbounded" minOccurs="0"/>
+			<xsd:element name="date" type="dateType" maxOccurs="unbounded" minOccurs="1"/>
 		</xsd:sequence>
 	</xsd:complexType>
 
