@@ -2,7 +2,7 @@
 
 |         field         |                                              description                                             |
 |:---------------------:|:----------------------------------------------------------------------------------------------------:|
-| data_protocol         | A general description of the data protocol                                                           |
+| ```xml data_protocol ```         | A general description of the data protocol                                                           |
 | sample_protocol       | A general description of the sample protocol                                                         |
 | omics_type            | The type of omics of the datasets; for example genomics                                              |
 | repository            | The name of the repository                                                                           |
