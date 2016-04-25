@@ -4,12 +4,12 @@ OmicsDI XML Schema
 Contents
 ----------
 
-1. [Omics Discovery Index](#1.-omics-Discovery-index)  
+1. [Omics Discovery Index](#1-omics-Discovery-index)  
 2. [OmicsDI database section](#2-omicsdi-database-section)    
-3. [OmicsDI Entries (datasets)](#3-omicsdi-entries)
- 3.1. [Entry](#3.1-entry)  
- 3.2. [Dataset Fields](#3.2-dataset-fields)  
- 3.3. [Cross References Fields](#3.3-cross-references-fields)
+3. [OmicsDI Entries](#3-omicsdi-entries)
+   3.1. [Entry](#31-entry)  
+   3.2. [Dataset Fields](#32-dataset-fields)  
+   3.3. [Cross References Fields](#33-cross-references-fields)
  
 ##1. Omics Discovery Index
 
