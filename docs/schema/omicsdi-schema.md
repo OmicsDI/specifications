@@ -4,24 +4,14 @@ OmicsDI XML Schema
 Contents
 ----------
 
-1. [Omics Discovery Index](#1.-omics-discovery-index)  
+1. [Omics Discovery Index](#1.-omics-Discovery-index)  
 2. [OmicsDI database section](#2-omicsdi-database-section)    
-3. [Field Types](#12-field-types) 
- 1.3. [Example](#13-examples)  
-* [Databases](#2-databases)  
-  2.1. [Major Partners?](#21-major-partners)  
-  2.2. [Which databases are part of OmicsDI](#22-which-databases-are-part-of-omicsdi)  
-  2.3. [OmicsDI Architecture?](#23-Omicsdi-architecture)  
-  2.4. [OmicsDI XML](#24-omicsDI-xml)
-* [Web services and Web Application](#3-web-services-and-web-application) 
-  3.1. [Access to the web-services](#31-access-to-the-web-services)
-  3.2. [Web Application](#32-web-application)
-* [Support](#4-support)  
-  3.1  [Get involved](#41-get-involved)  
-  3.2. [Contact](#42-contact)   
-* [License](#5-license)  
-
-#1. Omics Discovery Index
+3. [OmicsDI Entries (datasets)](#3-omicsdi-entries)
+ 3.1. [Entry](#3.1-entry)  
+ 3.2. [Dataset Fields](#3.2-dataset-fields)  
+ 3.3. [Cross References Fields](#3.3-cross-references-fields)
+ 
+##1. Omics Discovery Index
 
 
 The metadata of a dataset is a well-know problem in the biomedical community and information science.  In contrast with publications where a common structure is provided
@@ -125,7 +115,7 @@ the resources can export their data to **multiple datasets files**, example:
 ```
 
 
-##3. OmicsDI Entries (datasets)
+#3. OmicsDI Entries (datasets)
 
 The entry section contains all the datasets in the repository, provider. The _\<entries\>_ tag is used to listed all the entries. Each dataset is enclosed in a entry tag _\<entry\>_ . 
 
@@ -279,7 +269,8 @@ OmicsDI XML provides the _\<cross_references\>_ section in OmicsDI.
 #3.3 Cross References Fields
  
 OmicsDI provides a mechanisms to store and handler data that is well-referenced, structure and with common identifier such biological entities, ontology terms 
-taxonomies, publications, etc. For example:
+taxonomies, publications, etc. The cross-reference fields are used for those properties that link to other indexed databases. 
+For example, if the Pubmed identifier is known the cross-reference should be added referencing the Pubmed database:
 
 Publications referenced in pubmed can be annotated like:
 
@@ -328,6 +319,14 @@ Cross references _\<cross_references\>_ section is part of the entry and contain
 ```xml
 <cross_references>
      <ref dbkey="ENSP00000316578" dbname="ensembl"/>
+</cross_references>
+``` 
+
+* ChEBI Metabolite:
+
+```xml
+<cross_references>
+     <ref dbkey="CHEBI:30031" dbname="ChEBI"/>
 </cross_references>
 ``` 
 
