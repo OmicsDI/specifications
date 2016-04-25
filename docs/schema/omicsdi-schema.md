@@ -134,7 +134,7 @@ The entry section contains all the datasets in the repository, provider. The _\<
 
 Each entry contains all the information in three different sections: (1) general information (root properties), (2) cross-references, (3) additional fields. 
 
-##4. Entry (dataset)
+##4. Entry
 
 The entry tag started with three attibutes and one mandatory sections (see Example): 
 
