@@ -264,7 +264,7 @@ Some important points: The additional_fields section provides a mechanism to add
 search capabilities, however, is not well-designed for structured data where references and identifiers should be provided. For that information 
 OmicsDI XML provides the _\<cross_references\>_ section in OmicsDI. 
  
-#3.3 Cross References Fields
+##6. Cross References Fields
  
 OmicsDI provides a mechanisms to store and handler data that is well-referenced, structure and with common identifier such biological entities, ontology terms 
 taxonomies, publications, etc. The cross-reference fields are used for those properties that link to other indexed databases. 
