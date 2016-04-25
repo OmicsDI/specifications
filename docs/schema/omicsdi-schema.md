@@ -4,10 +4,10 @@ OmicsDI XML Schema
 Contents
 ----------
 
-1. [Omics Discovery Index](#1-omics-Discovery-index)  
+1. [Omics Discovery Index](#1-omics-discovery-index)  
 2. [OmicsDI database section](#2-omicsdi-database-section)    
 3. [OmicsDI Entries](#3-omicsdi-entries)
-   3.1. [Entry](#31-entry)  
+   3.1. [Entry](##31-entry)  
    3.2. [Dataset Fields](#32-dataset-fields)  
    3.3. [Cross References Fields](#33-cross-references-fields)
  
@@ -115,7 +115,7 @@ the resources can export their data to **multiple datasets files**, example:
 ```
 
 
-#3. OmicsDI Entries (datasets)
+#3. OmicsDI Entries
 
 The entry section contains all the datasets in the repository, provider. The _\<entries\>_ tag is used to listed all the entries. Each dataset is enclosed in a entry tag _\<entry\>_ . 
 
