@@ -30,7 +30,7 @@ and the corresponding metadata fields and the type of the fields. For each field
 if the proteins, genes or metabolites are provided for each dataset; omicsdi would be able to find the datasets were those proteins has been found.   
           
 
-#2. OmicsDI database section
+##2. OmicsDI database section
 
 The OmicsDI XML 1.0 is integrated by different sections. Here we will explain each section in details with the fields, the type of the fields and the structure of the sections. 
   
@@ -114,8 +114,7 @@ the resources can export their data to **multiple datasets files**, example:
  </database>   
 ```
 
-
-#3. OmicsDI Entries
+##3. OmicsDI Entries
 
 The entry section contains all the datasets in the repository, provider. The _\<entries\>_ tag is used to listed all the entries. Each dataset is enclosed in a entry tag _\<entry\>_ . 
 
@@ -135,7 +134,7 @@ The entry section contains all the datasets in the repository, provider. The _\<
 
 Each entry contains all the information in three different sections: (1) general information (root properties), (2) cross-references, (3) additional fields. 
 
-##3.1 Entry (dataset)
+##4. Entry (dataset)
 
 The entry tag started with three attibutes and one mandatory sections (see Example): 
 
@@ -148,7 +147,6 @@ The entry tag started with three attibutes and one mandatory sections (see Examp
   </description>
 </entry>    
 ```
-
 
 A dataset in omicsDI is compulsory to have three different attributes: and **identifier**, a **name**, and a definition or abstract:
  
@@ -182,7 +180,7 @@ However for OmicsDI a date value with the type **publication** should be provide
 Each date entry is composed by a **type** that represent the name of the date and can be amount other: publication **(M)**, submission **(A)**, updated **(A)**, creation **(A)**, others. It also
 contains a value attribute which is the value of the date, please you should check the **section general types** to see the format for the value.
  
-##3.2 Dataset Fields 
+##5. Dataset Fields 
 
 All the information of the dataset is handled using a key value pair structure under the the tag _\<additional_fields\>_ . Key value pairs struture allow you to store in the XML waht ever information the
 user/provider would like to provide to OmicsDI infrastructure. Some major advantages of key-value pair representation:
