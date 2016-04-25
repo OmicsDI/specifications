@@ -245,7 +245,7 @@ If the user one to reprsent multiple values for the same **key** it should repea
 | data_protocol         | An overview of the data protocol. Description about the software, pipeline and tools that was used to process the data.  | ``` <field name="data_protocol"></field>```                                                           | **R** |    [0..n]   |  
 |                       | This can be seen as a abstract of the data handling protocols. Databases used, etc.                                      |                                                                                                       |       |             |
 | sample_protocol       | An overview of the sample procol. Description about the general smaple handling and protocol.                            | ``` <field name="sample_protocol"></field>```                                                         | **R** |    [0..n]   |
-| repository            | The name of the repository or provider should be specifed at dataset level **(see comments below)**                      | ``` <field name="repository">PRIDE</field>```                                                         | **M** |      [1]    |
+| repository            | The name of the repository or provider should be specified at dataset level **(see comments below)**                      | ``` <field name="repository">PRIDE</field>```                                                         | **M** |      [1]    |
 | species               | Specie related with the dataset experiment **(Free Text)**                                                               | ``` <field name="species">Homo sapiens</field>```                                                     | **A** |    [0..n]   |
 | disease               | Disease related with the dataset and the sample under study (Free Text)                                                  | ``` <field name="disease">Cancer</field>```                                                           | **A** |    [0..n]   |
 | tissue                | Tissue related with the dataset and samples under study (Free Text)                                                      | ``` <field name="tissue">Liver</field>```                                                             | **A** |    [0..n]   |
@@ -261,5 +261,83 @@ If the user one to reprsent multiple values for the same **key** it should repea
 | quantification_method | Free text describing the quantitative method for example, ITRAQ, SILAC                                                   | ``` <field name="quantification_method">SILAQ</fields> ```                                            | **A** |    [0..n]   |
 | submission_type       | In ProteomeXChange this field is used to classify the type of submissions                                                | ``` <field name="quantification_method">COMPLETE</fields> ```                                         | **A** |    [0..n]   |
 | software              | Software used in the experiment                                                                                          | ``` <field name="software">Trans-Proteomics Pipeline</fields> ```                                     | **A** |    [0..n]   |
-| publication           | Free text describing the publications, citation, title, (see further explanation)                                        | ``` <field name="software">Effect of Obesity on the Preovulatory Follicle.</fields> ```               | **A** |    [0..n]   |
+| publication           | Free text describing the publications, citation, title, **(see comments below)**                                         | ``` <field name="software">Effect of Obesity on the Preovulatory Follicle.</fields> ```               | **A** |    [0..n]   |
+| dataset_file          | This a direct link to the data files realted with the dataset, that can be download and use by third-party tools         | ``` <field name="software">ftp://ftp.pride.ebi.ac.uk/pride/data/archive/2010/07/PRD000123/PRIDE_Exp_Complete_Ac_9777.xml.gz</fields> ``` | **A** |    [0..n]   |
+
+Some comments about these fields:
+
+* **repository**: the name of the repository should be provided at the dataset level because some providers can act as agregators distributing datasets 
+from different databases. Then the original repository should be provided using the field _\<field name="repository" />_
+
+* **publication**: Some resources do not provide information the pubmed publication or the original reference to it. In those cases omicsDI provides a 
+mechanisms to add the publication as free text buy using the field _\<field name="publication"\>_
+
+Some important points: The additional_fields section provides a mechanism to add free text to the omicsDI XML and is important for 
+search capabilities, however, is not well-designed for structured data where references and identifiers should be provided. For that information 
+OmicsDI XML provides the _\<cross_references\>_ section in OmicsDI. 
+ 
+#3.3 Cross References Fields
+ 
+OmicsDI provides a mechanisms to store and handler data that is well-referenced, structure and with common identifier such biological entities, ontology terms 
+taxonomies, publications, etc. For example:
+
+Publications referenced in pubmed can be annotated like:
+
+```xml
+    ...
+    <entry id="ST000004">
+      <name>Lipidomics studies on NIDDK / NIST human plasma samples</name>
+      <description>
+                The National Institute of Diabetes and Digestive and Kidney Diseases (NIDDK) in collaboration with the National Institute of Standards (NIST) 
+                recently produced a human plasma standard reference material (SRM 1950) for metabolite analysis.
+      </description>
+      <dates>
+          <date type="publication" value="13-02-22" /> 
+          <date type="submission"  value="13-02-20" />
+          <date type="updated"     value="14-05-21" />
+      </dates>
+      <additional_fields>
+        ...
+      </additional_fields>
+      <cross_references>
+         <ref dbkey="19770167" dbname="pubmed"/>
+      </cross_references>
+   </entry>  
+```
+
+Cross references _\<cross_references\>_ section is part of the entry and contains all the references to other other resources and information. Some important examples: 
+ 
+* Pubmed publication:
+
+```xml
+<cross_references>
+      <ref dbkey="19770167" dbname="pubmed"/>
+</cross_references>
+``` 
+ 
+* Uniprot Protein:
+ 
+```xml
+<cross_references>
+      <ref dbkey="P01130" dbname="uniprot"/>
+</cross_references>
+``` 
+
+* ENSEMBL Protein:
+
+```xml
+<cross_references>
+     <ref dbkey="ENSP00000316578" dbname="ensembl"/>
+</cross_references>
+``` 
+
+* GO term: 
+
+```xml
+<cross_references>
+     <ref dbkey="GO:0044752" dbname="go"/>
+</cross_references>
+```
+
+A full list of the available references can be found in [EBI Search Databases](https://www.ebi.ac.uk/ebisearch/).
 
