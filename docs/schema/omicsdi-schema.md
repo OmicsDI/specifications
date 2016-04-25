@@ -7,9 +7,9 @@ Contents
 1. [Omics Discovery Index](#1-omics-discovery-index)  
 2. [OmicsDI database section](#2-omicsdi-database-section)    
 3. [OmicsDI Entries](#3-omicsdi-entries)
-   3.1. [Entry](##31-entry)  
-   3.2. [Dataset Fields](#32-dataset-fields)  
-   3.3. [Cross References Fields](#33-cross-references-fields)
+4. [Entry](#4-entry)  
+5. [Dataset Fields](#5-dataset-fields)  
+6. [Cross References Fields](#6-cross-references-fields)
  
 ##1. Omics Discovery Index
 
