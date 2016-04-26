@@ -279,3 +279,7 @@ Contents
  </database>
 
 ```
+
+#2. Comments by Sections
+
+This example provides some interesting ways of exporting the data to OmicsDI 
