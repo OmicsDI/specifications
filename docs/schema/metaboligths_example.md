@@ -237,7 +237,7 @@ Contents
                 
                 <field name="full_dataset_link">http://www.ebi.ac.uk/metabolights/MTBLS125</field>
                 <field name="dataset_file">ftp://ftp.ebi.ac.uk/pub/databases/metabolights/studies/public/MTBLS125</field>
-                <field name="Organism">Nude Mouse</field>
+                <field name="species">Nude Mouse</field>
                 <field name="Organism Part">blood</field>
                 
                 <field name="publication">Metabolism of skin-absorbed resveratrol into its glucuronized form in mouse skin. 10.1371/journal.pone.0115359.</field>
@@ -282,4 +282,86 @@ Contents
 
 #2. Comments by Sections
 
-This example provides some interesting ways of exporting the data to OmicsDI 
+**Database header**
+
+This example provides some interesting sections that will allow us to explain in details the **key-value** schema. 
+As we explain in the [xml specification](https://github.com/BD2K-DDI/specifications/blob/master/docs/schema/README.md) the
+database entry should be wrote with the _name_ , _description_ , _release_ tag , _release_date_ , _entry_count_ the number of entries in the current xml file. 
+
+
+```xml
+<database>
+   <name>MetaboLights</name>
+    <description>MetaboLights is a database for Metabolomics experiments and derived information</description>
+    <release>3</release>
+    <release_date>2015-10-06</release_date>
+    <entry_count>2</entry_count>
+    ....
+    
+```
+
+ **Entry Information**
+ 
+Using the _cross\_references_ the providers can link the same biological entity to multiple databases. In this case the providers are linking the _α,α-trehalose_ to the ChEBI 
+identifier and the Metaboligths identifier. This cross-references system allows other databases and third-party applications to find the complete information from other databases. 
+
+ 
+```xml
+  <cross_references>
+      <ref dbkey="CHEBI:16551" dbname="ChEBI"/>
+      <ref dbkey="MTBLC16551" dbname="MetaboLights"/>
+....
+```
+
+
+**Defining more metadata**
+
+In the [xml specification](https://github.com/BD2K-DDI/specifications/blob/master/docs/schema/README.md) we defined a two main protocols as RECOMMENDED **data_protocol** and **sample_protocol**.
+However, additional information can be provided related with the protocols as **key-value** pairs. This open option is important for providers that for example implement [ISA format](http://www.isa-tools.org/).   
+In the current example the Metaboligths database provides four new protocols.   
+
+```xml
+
+ <field name="sample_protocol">
+    The fission yeast S. pombe heterothallic haploid 972 h wildtype strain was used for the experiments.
+ </field>
+ <field name="extraction_protocol">
+      Cells from cultures (40 ml/sample) were collected by vacuum filtration and immediately quenched in 25 ml of –40 °C methanol. 
+  </field>
+  <field name="chromatography_protocol">
+     LC-MS data were acquired using a Paradigm MS4 HPLC system (Michrom Bioresources, Auburn, AL, USA) coupled to an LTQ Orbitrap mass spectrometer (Thermo Fisher Scientific, Waltham, MA, USA).
+  </field>
+  <field name="mass_spec_protocol">
+     Mass spectrometer was operated in full scan mode with the scan range of 100-1,000 m/z. 
+  </field>
+  <field name="data_protocol">
+     Raw LC-MS data were analyzed by the MZmine 2 software. The complete workflow and processing parameters are summarized in the publication.
+  </field>
+  <field name="metabolite_id_protocol">
+     Metabolites were identified by comparing their m/z values and retention times with authentic pure standards, as described in the publication.
+  </field>
+```
+
+
+**Unreferenced data**
+ 
+Some biological entities can't be found [amount referenced databases](https://www.ebi.ac.uk/ebisearch/). In those cases the user can try to annotate as ke-value pairs 
+the data in the XML: 
+
+```xml
+ <additional_fields> 
+   <field name="metabolite_name">4-Aminobenzoate</field>
+ </additional_fields>
+```
+
+In this case Metaboligths annotated inside the XML the name of each metabolite as additional information. It also annotated information related with the study design"
+
+```xml
+ <additional_fields>
+     <field name="study_design">metabolite profiling</field>
+     <field name="study_design">Resveratrol</field>
+     <field name="study_design">Nude Mouse</field>
+     <field name="study_design">Mouse Skin</field>
+</additional_fields>
+```
+
