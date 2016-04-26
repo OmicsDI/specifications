@@ -101,8 +101,8 @@ those resources [see here](#24-omicsDI-xml) .
 
 ### 2.4. OmicsDI XML?
 
-The OmicsDI XML is used to export every database (including all the datasets) to a common structure. The XML structure (in short)
-is the following:
+The [OmicsDI XML](https://github.com/BD2K-DDI/specifications/blob/master/docs/schema/README.md) is used to export every database (including all the datasets) to a common structure [Full Description](https://github.com/BD2K-DDI/specifications/blob/master/docs/schema/README.md).
+The XML structure (in short) is the following:
 
 ```xml
 <database>
@@ -135,7 +135,7 @@ is the following:
 </database>         
 ```
 
-- Cross reference to other database entities is used to link for example external sources in the dataset. The **dbkey** correspond
+- Cross references to other database entities is used to link for example external sources in the dataset. The **dbkey** correspond
  with the entity in the database and the **dbname** correspond with the database id. Some examples:
    
    
@@ -145,7 +145,7 @@ is the following:
 
   - If the dataset was published in a scientific journal and is indexed in pubmed, the cross reference should be: <ref dbkey="26013411" dbname="pubmed"/>
 
-A complete list of all databases databases for reference can be found in [this site](http://www.ebi.ac.uk/ebisearch/). Some files from Proteomics/Metabolomics Data can be found [here]().  
+A full description of the XML Schema version 1.0 can be found [here] (https://github.com/BD2K-DDI/specifications/blob/master/docs/schema/README.md). A complete list of all databases databases for reference can be found in [this site](http://www.ebi.ac.uk/ebisearch/). Some files from Proteomics/Metabolomics Data can be found [here]().  
 
 3. Web services and Web Application
 -----------------------
