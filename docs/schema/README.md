@@ -27,7 +27,7 @@ and the corresponding metadata fields and the type of the fields. For each field
   
 *   **Mandatory   (M)**  : These fields should be provided in the omicsDI schema to be valid, it also represent the fields that needed to be defined for an OmicsDI dataset. 
 *   **Recommended (R)**: These fields should be provided to be searched and displayed properly by OmicsDI infrastructure, web, web-services. 
-*   **additional  (A)** : These fields should be provided to add value to the dataset, if the dataset contains more metadata the omicsDI infrastructure can make more sence out of the data. For example.
+*   **Additional  (A)** : These fields should be provided to add value to the dataset, if the dataset contains more metadata the omicsDI infrastructure can make more sence out of the data. For example.
 if the proteins, genes or metabolites are provided for each dataset; omicsdi would be able to find the datasets were those proteins has been found.   
           
 
@@ -344,3 +344,4 @@ A full list of the available references can be found in [EBI Search Databases](h
 | Example               | Comment                                                                                                                  | URL                                                                                                                               |
 |-----------------------|--------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------|
 | Metaboligths Dataset  | This file contains multiple datasets from Metaboligths database                                                          | [Metaboligths](https://github.com/BD2K-DDI/specifications/blob/master/docs/schema/metaboligths_example.md#1-full-metabolights-xml)| 
+| RIDE Dataset          | This file contains one dataset from PRIDE database                                                                       | [PRIDE](https://github.com/BD2K-DDI/specifications/blob/master/docs/schema/metaboligths_example.md#1-full-pride-xml)  
