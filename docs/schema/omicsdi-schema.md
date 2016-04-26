@@ -10,6 +10,7 @@ Contents
 4. [Entry](#4-entry)  
 5. [Dataset Fields](#5-dataset-fields)  
 6. [Cross References Fields](#6-cross-references-fields)
+7. [Examples](#7-examples) 
  
 ##1. Omics Discovery Index
 
@@ -338,3 +339,29 @@ Cross references _\<cross_references\>_ section is part of the entry and contain
 
 A full list of the available references can be found in [EBI Search Databases](https://www.ebi.ac.uk/ebisearch/).
 
+#7. Examples
+
+| Example               | Comment                                                                                                                  | URL                                                                                               | Type  | 
+|-----------------------|--------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|-------|-------------|
+| Metaboligths Dataset  | This file contains multiple datasets from Metaboligths database                                                          | | **M** |    [1..n]   |
+| data_protocol         | An overview of the data protocol. Description about the software, pipeline and tools that was used to process the data.  | ``` <field name="data_protocol"></field>```                                                           | **R** |    [0..n]   |  
+|                       | This can be seen as a abstract of the data handling protocols. Databases used, etc.                                      |                                                                                                       |       |             |
+| sample_protocol       | An overview of the sample procol. Description about the general smaple handling and protocol.                            | ``` <field name="sample_protocol"></field>```                                                         | **R** |    [0..n]   |
+| repository            | The name of the repository or provider should be specified at dataset level **(see comments below)**                     | ``` <field name="repository">PRIDE</field>```                                                         | **M** |      [1]    |
+| species               | Specie related with the dataset experiment **(Free Text)**                                                               | ``` <field name="species">Homo sapiens</field>```                                                     | **A** |    [0..n]   |
+| disease               | Disease related with the dataset and the sample under study (Free Text)                                                  | ``` <field name="disease">Cancer</field>```                                                           | **A** |    [0..n]   |
+| tissue                | Tissue related with the dataset and samples under study (Free Text)                                                      | ``` <field name="tissue">Liver</field>```                                                             | **A** |    [0..n]   |
+| cell_type             | The cell type annotations for the samples under study (Free Text)                                                        | ``` <field name="cell_type">brain cortex glial cell</field>```                                        | **A** |    [0..n]   |
+| full_dataset_link     | The original link of the dataset in the provider, it should be a universal URL that can be to find the original data     | ``` <field name="full_dataset_link">http://www.ebi.ac.uk/pride/archive/projects/PRD000123</field> ``` | **M** |      [1]    |                              
+| submitter             | Submitter name, Can be the full name of the person Who provided or submitted the data into the original repository       | ``` <field name="submitter">Yasset Perez-Riverol</field>```                                           | **A** |    [0..n]   |                                       
+| submitter_mail        | Submitter contact email is important to have a direct contact with the person Who submit the data                        | ``` <field name="submitter_mail">yperez@ebi.ac.uk</field> ```                                         | **A** |    [0..n]   |
+| submitter_affiliation | Submitter affiliation, Institution, Department, etc.                                                                     | ``` <field name="submitter_affiliation">European Bioinformatics Institute</field> ```                 | **A** |    [0..n]   |
+| instrument_platform   | This information is realted with all instrument used to analyze the sample and related with the dataset                  | ``` <field name="instrument_platform">LTQ Orbitrap</field> ```                                        | **R** |    [0..n]   | 
+| technology_type       | Technology type can be use to describe the experiment type or category, for example: MS/MS proteomics or SRM             | ``` <field name="technology_type">Tandem MS/MS</field> ```                                            | **A** |    [0..n]   |
+| modification          | Post-translational Modifications used mainlty in Proteomics experiments                                                  | ``` <field name="modification">Oxidation</field>       ```                                            | **A** |    [0..n]   |          
+| submitter_keywords    | Keywords related with the dataset, in this case their added by the submitter of the data                                 | ``` <field name="submitter_keywords">ProteoGenomics</fields> ```                                      | **A** |    [0..n]   |
+| quantification_method | Free text describing the quantitative method for example, ITRAQ, SILAC                                                   | ``` <field name="quantification_method">SILAQ</fields> ```                                            | **A** |    [0..n]   |
+| submission_type       | In ProteomeXChange this field is used to classify the type of submissions                                                | ``` <field name="quantification_method">COMPLETE</fields> ```                                         | **A** |    [0..n]   |
+| software              | Software used in the experiment                                                                                          | ``` <field name="software">Trans-Proteomics Pipeline</fields> ```                                     | **A** |    [0..n]   |
+| publication           | Free text describing the publications, citation, title, **(see comments below)**                                         | ``` <field name="software">Effect of Obesity on the Preovulatory Follicle.</fields> ```               | **A** |    [0..n]   |
+| dataset_file          | This a direct link to the data files realted with the dataset, that can be download and use by third-party tools         | ``` <field name="software">ftp://ftp.pride.ebi.ac.uk/pride/data/archive/2010/07/PRD000123/PRIDE_Exp_Complete_Ac_9777.xml.gz</fields> ``` | **A** |    [0..n]   |
