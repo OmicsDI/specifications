@@ -1,24 +1,32 @@
 # Fields currently use in OmicsDI
 
-|         field         |                                              description                                             |
-|:---------------------:|:----------------------------------------------------------------------------------------------------:|
-| ```xml data_protocol ```         | A general description of the data protocol                                                |
-| ```xml sample_protocol ```       | A general description of the sample protocol                                              |
-| ```xml omics_type ```            | The type of omics of the datasets; for example genomics                                   |
-| ```xml repository ```            | The name of the repository                                                                |
-| ```xml instrument_platform ```   | Instrument used to generate the data                                                      |
-| ```xml species ```               | Specie related with the experiment                                                        |
-| ```xml cell_type ```             | The cell Type                                                                             |
-| ```xml disease  ```               | Disease as free text                                                                     |
-| ```xml tissue ```                | Tissue as free text                                                                       |
-| ```xml modification ```          | Modifications                                                                             |
-| ```xml technology_type ```       | Technology type can be use to describe the experiment type or category, for example MS/MS proteomics |
-| ```xml submitter_keywords ```    | Keywords related with the experiment                                                      |
-| ```xml quantification_method ``` | Free text describing the quantitative method for example, ITRAQ, SILAC                    |
-| ```xml submission_type ```       | In PRIDE this field is used to classify the type of submissions                           |
-| ```xml software ```              | Software used in the experiment                                                           |
-| ```xml publication ```           | Free text describing the publications, citation, title                                    |
-| ```xml submitter ```             | Submitter name                                                                            |
-| ```xml submitter_mail ```        | Submitter email                                                                           |
-| ```xml submitter_affiliation ``` | Submitter affiliation                                                                     |
-| ```xml dataset_file ```          | Dataset supplementary files                                                               |
+| Category Type  |   Type       | Field Name               |                   Description                    | 
+|:--------------:|:------------:|:------------------------:|:------------------------------------------------:|
+|       -        |   Mandatory  | id                       | Unique id of the dataset withing the database    |
+|       -        |   Mandatory  | name                     | Title of the dataset                             |
+|       -        |   Mandatory  | description              | Description of the dataset                       | 
+|     dates      |   Mandatory  | publication              | Date of data published                           |
+|     dates      |   Optional   | updated                  | Date of Updated the data                         | 
+|     dates      |   Optional   | submission               | Date of submission of the data                   |
+|     dates      |   Optional   | creation                 | Date of creation                                 |  
+|     dates      |   Optional   | last_modification        | Date of last modification                        | 
+|   additional   |   Optional   | data_protocol            | A general description of the data processing     | 
+|   additional   |   Optional   | sample_protocol          | A general description of the sample procol       | 
+|   additional   |   Mandatory  | omics_type               | Type of the omics, important for the integration | 
+|   additional   |   Mandatory  | repository               | Name of the repository, it is important because some systems agrregate data here we capture the actual database |
+|   additional   |   Mandatory  | full_dataset_link        | The url where the dataset can be found           | 
+|   additional   |   Optional   | instrument_platform      | Instrument used to generate the data             |
+|   additional   |   Optional   | species                  | Species on **Free Text** to be index and search  | 
+|   additional   |   Optional   | cell_type                | Cell type on **Free Text** to be index and search| 
+|   additional   |   Optional   | disease                  | Disease type on **Free Text** to be index and search|
+|   additional   |   Optional   | tissue                   | Tissue type on **Free Text** to be index and search | 
+|   additional   |   Optional   | software                 | Software type on **Free Text** to be index and search | 
+|   additional   |   Mandatory  | submitter                | Submitter of the dataset to the original database | 
+|   additional   |   Mandatory  | submitter_mail           | Submitter mail                                    | 
+|   additional   |   Optional   | submitter_affiliation    | Submitter Affiliation                             | 
+|   additional   |   Optional   | submitter_keywords       | Submitter keywords                                |  
+|   additional   |   Optional   | labhead                  | Name of the PI or Head of the Lab                 |
+|   additional   |   Optional   | labhead_mail             | Email of the PI or Head of the Lab                | 
+|   additional   |   Optional   | labhead_affiliation      | Affiliation of the PI or Head of the Lab          | 
+|   additional   |   Optional   | publication              | Free text describing the publications, citation, title | 
+|   additional   |   Optional   | dataset_file             | Dataset supplementary files                        | 
