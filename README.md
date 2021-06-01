@@ -79,8 +79,8 @@ the relevant ethics approval.
 
 Currently six different databases in two continents are part of the OmicsDI consortium: 
  
-  - [PRIDE] (http://www.ebi.ac.uk/pride/archive/): The **PR**oteomics **IDE**ntification database. (EMBL-EBI, UK)(Proteomics)
-  - [PeptideAtlas] (http://www.peptideatlas.org/): A multi-organism, publicly accessible compendium of peptides identified in a large set of tandem mass spectrometry proteomics experiments. (System Biology Inst, Seattle, US)(Proteomics)
+  - [PRIDE](http://www.ebi.ac.uk/pride/archive/): The **PR**oteomics **IDE**ntification database. (EMBL-EBI, UK)(Proteomics)
+  - [PeptideAtlas](http://www.peptideatlas.org/): A multi-organism, publicly accessible compendium of peptides identified in a large set of tandem mass spectrometry proteomics experiments. (System Biology Inst, Seattle, US)(Proteomics)
   - [MassIVE](http://massive.ucsd.edu/ProteoSAFe/): The **Mass** spectrometry **I**nteractive **V**irtual **E**nvironment, is a community resource to promote the global, free exchange of mass spectrometry data. (UCSD, US)(Proteomics)
   - [Metaboligths](http://www.ebi.ac.uk/metabolights/): The Metabolomics Database. (EMBL-EBI, UK)(Metabolomics)
   - [Metabolomics Workbench](http://www.metabolomicsworkbench.org/): UCSD Metabolomics Workbench, a resource sponsored by the Common Fund of the National Institutes of Health. (UCSD, US) (Metabolomics)
